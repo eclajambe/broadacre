@@ -53,6 +53,13 @@
   line-height: 1;
 }
 
+/**
+ * Below are Broadacre custom UI styles
+ */
 .pl-c-body--theme-dark .pl-c-header {
   background-color: #1A1A1A;
+}
+.pl-c-nav__link:not(.pl-c-nav__link--title):not(.pl-c-nav__link--dropdown).pl-is-active {
+  -webkit-box-shadow: inset 4px 0 0 #F0AB00;
+  box-shadow: inset 4px 0 0 #F0AB00;
 }

@@ -1,7 +1,7 @@
 {
   "cacheBust": true,
   "cleanPublic": true,
-  "defaultPattern": "all",
+  "defaultPattern": "atoms-text",
   "defaultShowPatternInfo": false,
   "ishControlsHide": {
     "s": false,
@@ -90,11 +90,18 @@
   },
   "starterkitSubDir": "dist",
   "styleGuideExcludes": [],
-  "theme": {
-    "color": "light",
-    "density": "compact",
-    "layout": "horizontal",
-    "noViewAll": false
+  "theme" : {
+    "color" : "dark",
+    "density" : "comfortable",
+    "layout" : "horizontal",
+    "noViewAll" : false,
+    "logo": {
+      "text": "",
+      "altText": "Broadacre",
+      "url": "./",
+      "srcLight": "styleguide/images/ba-logo--on-light.svg",
+      "srcDark": "styleguide/images/ba-logo--on-dark.svg"
+    }
   },
   "uikits": [
     {

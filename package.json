@@ -24,6 +24,7 @@
     "@pattern-lab/engine-twig-php": "^5.15.0",
     "@pattern-lab/starterkit-twig-demo": "^5.14.2",
     "@pattern-lab/uikit-workshop": "^5.15.0",
+    "plugin-node-uiextension": "^1.0.0-alpha",
     "sass": "^1.43.2"
   },
   "devDependencies": {

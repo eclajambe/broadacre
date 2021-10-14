@@ -52,3 +52,7 @@
   font-size: 90%;
   line-height: 1;
 }
+
+.pl-c-body--theme-dark .pl-c-header {
+  background-color: #1A1A1A;
+}

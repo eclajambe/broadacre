@@ -84,6 +84,25 @@
   "patternExportPreserveDirectoryStructure": true,
   "patternExportRaw": false,
   "patternMergeVariantArrays": true,
+  "plugins": {
+    "plugin-node-uiextension": {
+      "enabled": true,
+      "initialized": false,
+      "options": {
+        "stylesheets": [
+          "../../../css/pattern-scaffolding.css"
+        ],
+        "navLinks": {
+          "before": [],
+          "after": []
+        },
+        "gearLinks": {
+          "before": [],
+          "beforeSearch": []
+        }
+      }
+    }
+  },  
   "renderFlatPatternsOnViewAllPages": false,
   "serverOptions": {
     "wait": 1000

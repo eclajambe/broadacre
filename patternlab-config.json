@@ -1,7 +1,7 @@
 {
   "cacheBust": true,
   "cleanPublic": true,
-  "defaultPattern": "atoms-text",
+  "defaultPattern": "all",
   "defaultShowPatternInfo": false,
   "ishControlsHide": {
     "s": false,
@@ -102,18 +102,18 @@
         }
       }
     }
-  },  
+  },
   "renderFlatPatternsOnViewAllPages": false,
   "serverOptions": {
     "wait": 1000
   },
   "starterkitSubDir": "dist",
   "styleGuideExcludes": [],
-  "theme" : {
-    "color" : "dark",
-    "density" : "comfortable",
-    "layout" : "horizontal",
-    "noViewAll" : false,
+  "theme": {
+    "color": "dark",
+    "density": "comfortable",
+    "layout": "horizontal",
+    "noViewAll": false,
     "logo": {
       "text": "",
       "altText": "Broadacre",

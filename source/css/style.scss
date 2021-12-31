@@ -40,6 +40,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
  * MIXINS.................................Sass mixins 
  * RESET..................................Set reset defaults
  * GLOBAL CLASSES.........................Set reset defaults
+ * THEMES.................................Establish theme variables
  * GLOBAL ELEMENTS........................Establish global styles
  * .....Main
  * .....Headings
@@ -53,13 +54,16 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
  * TOC To Be Continued
  */
 
-
+@import "scss/generic/reset";
 @import "scss/generic/fonts";
 @import "scss/generic/variables";
 @import "scss/generic/mixins";
-@import "scss/generic/reset";
 
 
+/*------------------------------------*\
+    $THEMES
+\*------------------------------------*/
+@import "scss/theme/core";
 
 
 /*------------------------------------*\
@@ -69,15 +73,12 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "scss/base/main";
 @import "scss/base/links";
 @import "scss/base/headings";
-@import "scss/base/text";
+@import "scss/base/type";
 @import "scss/base/lists";
 @import "scss/base/media";
 @import "scss/base/forms";
 @import "scss/base/tables";
 @import "scss/base/animation";
-
-
-
 
 
 /*------------------------------------*\
@@ -95,7 +96,6 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "scss/objects/footer";
 
 
-
 /*------------------------------------*\
     $TEXT Styles
 \*------------------------------------*/
@@ -108,6 +108,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "scss/objects/icons";
 @import "scss/objects/buttons";
 @import "scss/objects/blocks";
+@import "scss/objects/cards";
 @import "scss/objects/lists";
 @import "scss/objects/tooltip";
 @import "scss/objects/accordion";
@@ -116,5 +117,3 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "scss/objects/article";
 @import "scss/objects/comments";
 @import "scss/objects/messaging";
-
-

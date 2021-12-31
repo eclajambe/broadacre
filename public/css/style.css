@@ -39,6 +39,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
  * MIXINS.................................Sass mixins 
  * RESET..................................Set reset defaults
  * GLOBAL CLASSES.........................Set reset defaults
+ * THEMES.................................Establish theme variables
  * GLOBAL ELEMENTS........................Establish global styles
  * .....Main
  * .....Headings
@@ -51,6 +52,22 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
  * NAVIGATION------------------------------
  * TOC To Be Continued
  */
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+  margin: 0;
+  padding: 0; }
+
+header, footer, nav, section, article, hgroup, figure {
+  display: block; }
+
 @font-face {
   font-family: BentonSans;
   src: url("../../../fonts/bentonsans/bentonsans-regular/bentonsans-regular.woff") format("woff"), url("../../../fonts/bentonsans/bentonsans-regular/bentonsans-regular.ttf") format("ttf"); }
@@ -132,20 +149,146 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 	Usage: @include font-size(1, large);
 */
 /*------------------------------------*\
-    $RESET
+    $THEMES
 \*------------------------------------*/
-/* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+:root {
+  --space: 1rem;
+  --space-8xl: calc(var(--space) * 9rem);
+  --space-7xl: calc(var(--space) * 8rem);
+  --space-6xl: calc(var(--space) * 7rem);
+  --space-5xl: calc(var(--space) * 6rem);
+  --space-4xl: calc(var(--space) * 5rem);
+  --space-3xl: calc(var(--space) * 4rem);
+  --space-xxl: calc(var(--space) * 3rem);
+  --space-xl: calc(var(--space) * 2rem);
+  --space-lg: calc(var(--space) * 1.5rem);
+  --space-sm: calc(var(--space) * 0.75rem);
+  --space-xs: calc(var(--space) * 0.5rem);
+  --space-xxs: calc(var(--space) * 0.2em); }
 
-html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
-  margin: 0;
-  padding: 0; }
+body {
+  --bgColor: #FFFFFF;
+  --eyebrowColor: #8f9ca3;
+  --headlineColor: #1a1a1a;
+  --headlineLinkColor: #0078b6;
+  --bodyColor: #1a1a1a;
+  --linkColor: #0078b6;
+  --linkColorInactive: #b1bdc4;
+  --pictogramOutline: #000000;
+  --pictogramColor: #008fd3;
+  --primaryBtnBg: #0078b6;
+  --primaryBtnBorder: #0078b6;
+  --primaryBtnColor: #FFFFFF;
+  --primaryBtnBgHover: #005f92;
+  --primaryBtnBgBorderHover: #005f92;
+  --secondaryBtnBg: transparent;
+  --secondaryBtnBorder: #1a1a1a;
+  --secondaryBtnColor: #1a1a1a;
+  --secondaryBtnBgHover: #1a1a1a;
+  --secondaryBtnBorderHover: #1a1a1a;
+  --secondaryBtnColorHover: #FFFFFF;
+  --inactiveBg: #e3ebef;
+  --inactiveColor: #b1bdc4;
+  --inputBg: #FFFFFF;
+  --inputColor: #52575a;
+  --inputBorder: #cdd8de;
+  --inputColorFocus: #52575a;
+  --inputBorderFocus: #0078b6;
+  --inputColorError: #52575a;
+  --inputBorderError: #e6633b;
+  --inputBgInactive: #e3ebef;
+  --inputColorInactive: #b1bdc4;
+  --inputBorderInactive: #cdd8de;
+  --cardBg: #FFFFFF;
+  --cardBorderColor: #e3ebef;
+  --headlineCardColor: #1a1a1a;
+  --bodyCardColor: #1a1a1a;
+  --linkCardColor: #0078b6;
+  --pictogramCardOutline: #000000;
+  --pictogramCardColor: #008fd3; }
 
-header, footer, nav, section, article, hgroup, figure {
-  display: block; }
+body .light-gray {
+  --bgColor: #f7f9fa;
+  --eyebrowColor: #8f9ca3;
+  --headlineColor: #1a1a1a;
+  --headlineLinkColor: #0078b6;
+  --bodyColor: #1a1a1a;
+  --linkColor: #0078b6;
+  --linkColorInactive: #b1bdc4;
+  --pictogramOutline: #000000;
+  --pictogramColor: #008fd3;
+  --primaryBtnBg: #0078b6;
+  --primaryBtnBorder: #0078b6;
+  --primaryBtnColor: #FFFFFF;
+  --primaryBtnBgHover: #005f92;
+  --primaryBtnBgBorderHover: #005f92;
+  --secondaryBtnBg: transparent;
+  --secondaryBtnBorder: #1a1a1a;
+  --secondaryBtnColor: #1a1a1a;
+  --secondaryBtnBgHover: #1a1a1a;
+  --secondaryBtnBorderHover: #1a1a1a;
+  --secondaryBtnColorHover: #FFFFFF;
+  --inactiveBg: #e3ebef;
+  --inactiveColor: #b1bdc4;
+  --inputBg: #f7f9fa;
+  --inputColor: #52575a;
+  --inputBorder: #cdd8de;
+  --inputColorFocus: #52575a;
+  --inputBorderFocus: #0078b6;
+  --inputColorError: #52575a;
+  --inputBorderError: #e6633b;
+  --inputBgInactive: #e3ebef;
+  --inputColorInactive: #b1bdc4;
+  --inputBorderInactive: #cdd8de;
+  --cardBg: #FFFFFF;
+  --cardBorderColor: #e3ebef;
+  --headlineCardColor: #1a1a1a;
+  --bodyCardColor: #1a1a1a;
+  --linkCardColor: #0078b6;
+  --pictogramCardOutline: #000000;
+  --pictogramCardColor: #008fd3; }
+
+body.dark,
+body .dark {
+  --bgColor: #f7f9fa;
+  --eyebrowColor: #8f9ca3;
+  --headlineColor: #1a1a1a;
+  --headlineLinkColor: #0078b6;
+  --bodyColor: #1a1a1a;
+  --linkColor: #f0ab00;
+  --linkColorInactive: #b1bdc4;
+  --pictogramOutline: #FFFFFF;
+  --pictogramColor: #008fd3;
+  --primaryBtnBg: #f0ab00;
+  --primaryBtnBorder: #f0ab00;
+  --primaryBtnColor: #FFFFFF;
+  --primaryBtnBgHover: #005f92;
+  --primaryBtnBgBorderHover: #005f92;
+  --secondaryBtnBg: transparent;
+  --secondaryBtnBorder: #1a1a1a;
+  --secondaryBtnColor: #1a1a1a;
+  --secondaryBtnBgHover: #1a1a1a;
+  --secondaryBtnBorderHover: #1a1a1a;
+  --secondaryBtnColorHover: #FFFFFF;
+  --inactiveBg: #e3ebef;
+  --inactiveColor: #b1bdc4;
+  --inputBg: #FFFFFF;
+  --inputColor: #52575a;
+  --inputBorder: #cdd8de;
+  --inputColorFocus: #52575a;
+  --inputBorderFocus: #0078b6;
+  --inputColorError: #52575a;
+  --inputBorderError: #e6633b;
+  --inputBgInactive: #e3ebef;
+  --inputColorInactive: #b1bdc4;
+  --inputBorderInactive: #cdd8de;
+  --cardBg: #FFFFFF;
+  --cardBorderColor: #e3ebef;
+  --headlineCardColor: #1a1a1a;
+  --bodyCardColor: #1a1a1a;
+  --linkCardColor: #0078b6;
+  --pictogramCardOutline: #000000;
+  --pictogramCardColor: #008fd3; }
 
 /*------------------------------------*\
     $GLOBAL ELEMENTS
@@ -233,18 +376,20 @@ header, footer, nav, section, article, hgroup, figure {
   font-family: Georgia, Times, "Times New Roman", serif; }
 
 body {
-  background: #fff;
+  background: #FFFFFF;
   font: 100%/1.5 "BentonSans", "Helvetica", "Arial", sans-serif;
+  font-display: swap;
+  font-weight: 500;
   -webkit-text-size-adjust: 100%;
-  color: #333; }
+  color: #1a1a1a; }
 
 /* Links */
 a {
-  color: #333;
+  color: #0078b6;
   text-decoration: none;
   outline: 0; }
   a:hover, a:focus {
-    color: #808080; }
+    color: #008fd3; }
 
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
@@ -259,10 +404,10 @@ h3, .gamma {
 
 /* Subheadings */
 .subheading {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "BentonSans", "Helvetica", "Arial", sans-serif;
   font-weight: normal; }
 
-/* Text-Related Elements */
+/* Type-Related Elements */
 p {
   margin-bottom: 1em; }
 
@@ -385,7 +530,7 @@ input[type="search"]::-webkit-search-decoration {
   width: auto; }
   .inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
     background: #808080;
-    color: #fff; }
+    color: #FFFFFF; }
 
 /* Validation */
 .has-error {
@@ -625,7 +770,7 @@ td {
     $PAGE STRUCTURE
 \*------------------------------------*/
 .header {
-  background: #fff;
+  background: #FFFFFF;
   padding: 0;
   border-bottom: 1px solid #dbdbdb; }
 
@@ -708,7 +853,7 @@ td {
   clear: both;
   overflow: hidden;
   background: #131313;
-  color: #fff;
+  color: #FFFFFF;
   line-height: 1.2; }
   .footer a {
     color: #f9f9f9; }
@@ -871,7 +1016,7 @@ td {
 .icon-play-box:before {
   padding: 0.25em;
   background: #808080;
-  color: #fff;
+  color: #FFFFFF;
   margin-left: -1.7rem;
   margin-right: 0.5em; }
 
@@ -880,8 +1025,8 @@ td {
 \*------------------------------------*/
 .btn {
   display: inline-block;
-  background: #333;
-  color: #fff;
+  background: var(--primaryBtnBg);
+  color: #FFFFFF;
   line-height: 1;
   font-weight: bold;
   padding: 1em;
@@ -889,7 +1034,7 @@ td {
   text-align: center; }
   .btn:hover, .btn:focus {
     background: #808080;
-    color: #fff; }
+    color: #FFFFFF; }
   .btn.disabled {
     background: #eee;
     color: #808080; }
@@ -938,7 +1083,7 @@ td {
         left: 0;
         width: 100%;
         background: rgba(0, 0, 0, 0.5);
-        color: #fff;
+        color: #FFFFFF;
         padding: 1.5em; } }
 
 /* Block Thumbnail with Headline */
@@ -992,7 +1137,7 @@ td {
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: #FFFFFF;
     padding: 0.5em; }
 
 /* Block Thumb with Summary */
@@ -1003,6 +1148,28 @@ td {
 .block-thumb-summary .b-text {
   margin-left: 50%;
   padding: 0.5em; }
+
+/*------------------------------------*\
+    $CARDS
+\*------------------------------------*/
+.card {
+  background: var(--cardBg); }
+  .card--containment-padded {
+    padding: 1.5em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #e3ebef;
+    border-radius: 0.5em; }
+  .card .card-image {
+    margin-bottom: 1.5em; }
+    .card .card-image img {
+      width: 100%; }
+  .card .card-headline {
+    color: var(--headlineCardColor); }
+  .card .card-body {
+    color: var(--bodyCardColor); }
+  .card .card-link {
+    color: var(--linkCardColor); }
 
 .inline-list li {
   display: inline-block; }
@@ -1060,7 +1227,7 @@ td {
   left: 0;
   width: 18em;
   padding: 1em;
-  background: #fff;
+  background: #FFFFFF;
   border: 1px solid #808080;
   box-shadow: 0.3em 0.3em 1em 0 rgba(0, 0, 0, 0.2); }
   .tooltip h2 {
@@ -1080,7 +1247,7 @@ td {
 
 .acc-handle {
   background: #131313;
-  color: #fff;
+  color: #FFFFFF;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: bold;
   display: block;
@@ -1091,7 +1258,7 @@ td {
     content: "+";
     float: right; }
   .acc-handle:hover {
-    color: #fff;
+    color: #FFFFFF;
     background: #333; }
   .acc-handle.active {
     background: #333; }
@@ -1117,7 +1284,7 @@ td {
       background: #ddd; }
     .tabs a.active {
       background: #333;
-      color: #fff; }
+      color: #FFFFFF; }
 
 .section {
   margin: 0 0 1em; }
@@ -1141,7 +1308,7 @@ td {
     margin-right: 0.5em; }
   .social-share a {
     background: #333;
-    color: #fff;
+    color: #FFFFFF;
     display: block;
     padding: 0.5em; }
     .social-share a:hover {
@@ -1265,7 +1432,7 @@ input[type="search"]::-webkit-search-decoration {
   width: auto; }
   .inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
     background: #808080;
-    color: #fff; }
+    color: #FFFFFF; }
 
 /* Validation */
 .has-error {
@@ -1383,16 +1550,16 @@ h3, .gamma {
 
 /* Subheadings */
 .subheading {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "BentonSans", "Helvetica", "Arial", sans-serif;
   font-weight: normal; }
 
 /* Links */
 a {
-  color: #333;
+  color: #0078b6;
   text-decoration: none;
   outline: 0; }
   a:hover, a:focus {
-    color: #808080; }
+    color: #008fd3; }
 
 ol, ul {
   margin: 0;
@@ -1411,10 +1578,12 @@ dd {
   margin-left: 0; }
 
 body {
-  background: #fff;
+  background: #FFFFFF;
   font: 100%/1.5 "BentonSans", "Helvetica", "Arial", sans-serif;
+  font-display: swap;
+  font-weight: 500;
   -webkit-text-size-adjust: 100%;
-  color: #333; }
+  color: #1a1a1a; }
 
 /*------------------------------------*\
     $MEDIA ELEMENTS
@@ -1453,7 +1622,7 @@ td {
   border: 1px solid #808080;
   padding: 0.2em; }
 
-/* Text-Related Elements */
+/* Type-Related Elements */
 p {
   margin-bottom: 1em; }
 
@@ -1577,7 +1746,7 @@ header, footer, nav, section, article, hgroup, figure {
 
 .acc-handle {
   background: #131313;
-  color: #fff;
+  color: #FFFFFF;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: bold;
   display: block;
@@ -1588,7 +1757,7 @@ header, footer, nav, section, article, hgroup, figure {
     content: "+";
     float: right; }
   .acc-handle:hover {
-    color: #fff;
+    color: #FFFFFF;
     background: #333; }
   .acc-handle.active {
     background: #333; }
@@ -1611,7 +1780,7 @@ header, footer, nav, section, article, hgroup, figure {
     margin-right: 0.5em; }
   .social-share a {
     background: #333;
-    color: #fff;
+    color: #FFFFFF;
     display: block;
     padding: 0.5em; }
     .social-share a:hover {
@@ -1648,7 +1817,7 @@ header, footer, nav, section, article, hgroup, figure {
         left: 0;
         width: 100%;
         background: rgba(0, 0, 0, 0.5);
-        color: #fff;
+        color: #FFFFFF;
         padding: 1.5em; } }
 
 /* Block Thumbnail with Headline */
@@ -1702,7 +1871,7 @@ header, footer, nav, section, article, hgroup, figure {
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: #FFFFFF;
     padding: 0.5em; }
 
 /* Block Thumb with Summary */
@@ -1719,8 +1888,8 @@ header, footer, nav, section, article, hgroup, figure {
 \*------------------------------------*/
 .btn {
   display: inline-block;
-  background: #333;
-  color: #fff;
+  background: var(--primaryBtnBg);
+  color: #FFFFFF;
   line-height: 1;
   font-weight: bold;
   padding: 1em;
@@ -1728,7 +1897,7 @@ header, footer, nav, section, article, hgroup, figure {
   text-align: center; }
   .btn:hover, .btn:focus {
     background: #808080;
-    color: #fff; }
+    color: #FFFFFF; }
   .btn.disabled {
     background: #eee;
     color: #808080; }
@@ -1745,6 +1914,28 @@ header, footer, nav, section, article, hgroup, figure {
 
 .text-btn {
   font-style: italic; }
+
+/*------------------------------------*\
+    $CARDS
+\*------------------------------------*/
+.card {
+  background: var(--cardBg); }
+  .card--containment-padded {
+    padding: 1.5em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #e3ebef;
+    border-radius: 0.5em; }
+  .card .card-image {
+    margin-bottom: 1.5em; }
+    .card .card-image img {
+      width: 100%; }
+  .card .card-headline {
+    color: var(--headlineCardColor); }
+  .card .card-body {
+    color: var(--bodyCardColor); }
+  .card .card-link {
+    color: var(--linkCardColor); }
 
 /* Horizontal Carousel */
 .carousel-horizontal {
@@ -1799,7 +1990,7 @@ header, footer, nav, section, article, hgroup, figure {
   clear: both;
   overflow: hidden;
   background: #131313;
-  color: #fff;
+  color: #FFFFFF;
   line-height: 1.2; }
   .footer a {
     color: #f9f9f9; }
@@ -1821,7 +2012,7 @@ header, footer, nav, section, article, hgroup, figure {
     float: right; } }
 
 .header {
-  background: #fff;
+  background: #FFFFFF;
   padding: 0;
   border-bottom: 1px solid #dbdbdb; }
 
@@ -1967,7 +2158,7 @@ header, footer, nav, section, article, hgroup, figure {
 .icon-play-box:before {
   padding: 0.25em;
   background: #808080;
-  color: #fff;
+  color: #FFFFFF;
   margin-left: -1.7rem;
   margin-right: 0.5em; }
 
@@ -2267,7 +2458,7 @@ header, footer, nav, section, article, hgroup, figure {
       background: #ddd; }
     .tabs a.active {
       background: #333;
-      color: #fff; }
+      color: #FFFFFF; }
 
 .intro {
   font-size: 1.0625em;
@@ -2311,7 +2502,7 @@ header, footer, nav, section, article, hgroup, figure {
   left: 0;
   width: 18em;
   padding: 1em;
-  background: #fff;
+  background: #FFFFFF;
   border: 1px solid #808080;
   box-shadow: 0.3em 0.3em 1em 0 rgba(0, 0, 0, 0.2); }
   .tooltip h2 {
@@ -2325,3 +2516,142 @@ header, footer, nav, section, article, hgroup, figure {
   @media all and (min-width: 39.8em) {
     .tooltip {
       width: 30em; } }
+
+:root {
+  --space: 1rem;
+  --space-8xl: calc(var(--space) * 9rem);
+  --space-7xl: calc(var(--space) * 8rem);
+  --space-6xl: calc(var(--space) * 7rem);
+  --space-5xl: calc(var(--space) * 6rem);
+  --space-4xl: calc(var(--space) * 5rem);
+  --space-3xl: calc(var(--space) * 4rem);
+  --space-xxl: calc(var(--space) * 3rem);
+  --space-xl: calc(var(--space) * 2rem);
+  --space-lg: calc(var(--space) * 1.5rem);
+  --space-sm: calc(var(--space) * 0.75rem);
+  --space-xs: calc(var(--space) * 0.5rem);
+  --space-xxs: calc(var(--space) * 0.2em); }
+
+body {
+  --bgColor: #FFFFFF;
+  --eyebrowColor: #8f9ca3;
+  --headlineColor: #1a1a1a;
+  --headlineLinkColor: #0078b6;
+  --bodyColor: #1a1a1a;
+  --linkColor: #0078b6;
+  --linkColorInactive: #b1bdc4;
+  --pictogramOutline: #000000;
+  --pictogramColor: #008fd3;
+  --primaryBtnBg: #0078b6;
+  --primaryBtnBorder: #0078b6;
+  --primaryBtnColor: #FFFFFF;
+  --primaryBtnBgHover: #005f92;
+  --primaryBtnBgBorderHover: #005f92;
+  --secondaryBtnBg: transparent;
+  --secondaryBtnBorder: #1a1a1a;
+  --secondaryBtnColor: #1a1a1a;
+  --secondaryBtnBgHover: #1a1a1a;
+  --secondaryBtnBorderHover: #1a1a1a;
+  --secondaryBtnColorHover: #FFFFFF;
+  --inactiveBg: #e3ebef;
+  --inactiveColor: #b1bdc4;
+  --inputBg: #FFFFFF;
+  --inputColor: #52575a;
+  --inputBorder: #cdd8de;
+  --inputColorFocus: #52575a;
+  --inputBorderFocus: #0078b6;
+  --inputColorError: #52575a;
+  --inputBorderError: #e6633b;
+  --inputBgInactive: #e3ebef;
+  --inputColorInactive: #b1bdc4;
+  --inputBorderInactive: #cdd8de;
+  --cardBg: #FFFFFF;
+  --cardBorderColor: #e3ebef;
+  --headlineCardColor: #1a1a1a;
+  --bodyCardColor: #1a1a1a;
+  --linkCardColor: #0078b6;
+  --pictogramCardOutline: #000000;
+  --pictogramCardColor: #008fd3; }
+
+body .light-gray {
+  --bgColor: #f7f9fa;
+  --eyebrowColor: #8f9ca3;
+  --headlineColor: #1a1a1a;
+  --headlineLinkColor: #0078b6;
+  --bodyColor: #1a1a1a;
+  --linkColor: #0078b6;
+  --linkColorInactive: #b1bdc4;
+  --pictogramOutline: #000000;
+  --pictogramColor: #008fd3;
+  --primaryBtnBg: #0078b6;
+  --primaryBtnBorder: #0078b6;
+  --primaryBtnColor: #FFFFFF;
+  --primaryBtnBgHover: #005f92;
+  --primaryBtnBgBorderHover: #005f92;
+  --secondaryBtnBg: transparent;
+  --secondaryBtnBorder: #1a1a1a;
+  --secondaryBtnColor: #1a1a1a;
+  --secondaryBtnBgHover: #1a1a1a;
+  --secondaryBtnBorderHover: #1a1a1a;
+  --secondaryBtnColorHover: #FFFFFF;
+  --inactiveBg: #e3ebef;
+  --inactiveColor: #b1bdc4;
+  --inputBg: #f7f9fa;
+  --inputColor: #52575a;
+  --inputBorder: #cdd8de;
+  --inputColorFocus: #52575a;
+  --inputBorderFocus: #0078b6;
+  --inputColorError: #52575a;
+  --inputBorderError: #e6633b;
+  --inputBgInactive: #e3ebef;
+  --inputColorInactive: #b1bdc4;
+  --inputBorderInactive: #cdd8de;
+  --cardBg: #FFFFFF;
+  --cardBorderColor: #e3ebef;
+  --headlineCardColor: #1a1a1a;
+  --bodyCardColor: #1a1a1a;
+  --linkCardColor: #0078b6;
+  --pictogramCardOutline: #000000;
+  --pictogramCardColor: #008fd3; }
+
+body.dark,
+body .dark {
+  --bgColor: #f7f9fa;
+  --eyebrowColor: #8f9ca3;
+  --headlineColor: #1a1a1a;
+  --headlineLinkColor: #0078b6;
+  --bodyColor: #1a1a1a;
+  --linkColor: #f0ab00;
+  --linkColorInactive: #b1bdc4;
+  --pictogramOutline: #FFFFFF;
+  --pictogramColor: #008fd3;
+  --primaryBtnBg: #f0ab00;
+  --primaryBtnBorder: #f0ab00;
+  --primaryBtnColor: #FFFFFF;
+  --primaryBtnBgHover: #005f92;
+  --primaryBtnBgBorderHover: #005f92;
+  --secondaryBtnBg: transparent;
+  --secondaryBtnBorder: #1a1a1a;
+  --secondaryBtnColor: #1a1a1a;
+  --secondaryBtnBgHover: #1a1a1a;
+  --secondaryBtnBorderHover: #1a1a1a;
+  --secondaryBtnColorHover: #FFFFFF;
+  --inactiveBg: #e3ebef;
+  --inactiveColor: #b1bdc4;
+  --inputBg: #FFFFFF;
+  --inputColor: #52575a;
+  --inputBorder: #cdd8de;
+  --inputColorFocus: #52575a;
+  --inputBorderFocus: #0078b6;
+  --inputColorError: #52575a;
+  --inputBorderError: #e6633b;
+  --inputBgInactive: #e3ebef;
+  --inputColorInactive: #b1bdc4;
+  --inputBorderInactive: #cdd8de;
+  --cardBg: #FFFFFF;
+  --cardBorderColor: #e3ebef;
+  --headlineCardColor: #1a1a1a;
+  --bodyCardColor: #1a1a1a;
+  --linkCardColor: #0078b6;
+  --pictogramCardOutline: #000000;
+  --pictogramCardColor: #008fd3; }

@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    $CARDS
+\*------------------------------------*/
+.card {
+    
+    background: var(--cardBg);
+
+    &--containment-padded {
+        padding: $pad-and-half;
+        //border: $border-thin solid var(--cardBorderColor);
+        border-width: $border-thin;
+        border-style: solid;
+        border-color: $gray-20;
+        border-radius: $radius-lg;
+    }
+
+    &--action-supplemental {
+
+    }
+
+    .card-image {
+        margin-bottom: $space-and-half;
+        
+        img {
+            width: 100%;
+        }
+
+    }
+
+    .card-headline {
+        color: var(--headlineCardColor);
+    }
+
+    .card-body {
+        color: var(--bodyCardColor);
+    }
+
+    .card-link {
+        color: var(--linkCardColor);
+    }
+
+}

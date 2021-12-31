@@ -11,6 +11,10 @@
       "src": "../../images/fpo_16x9.png",
       "alt": "16x9 Image"
     },
+    "landscape_2x1": {
+      "src": "../../images/fpo_2x1.png",
+      "alt": "2x1 Image"
+    },    
     "square": {
       "src": "../../images/fpo_square.png",
       "alt": "Square Thumbnail"
@@ -76,6 +80,9 @@
     "first_name": "Author",
     "last_name": "Name"
   },
+  "cta" : {
+    "newsroom": "Keep reading"
+  },  
   "hero": true,
   "emergency" : false,
   "touts" : [

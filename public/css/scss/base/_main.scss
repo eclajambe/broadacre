@@ -1,6 +1,8 @@
 body {
 	background: $white;
 	font: 100%/1.5 $font;
+	font-display: swap; //https://css-tricks.com/the-best-font-loading-strategies-and-how-to-execute-them/#font-display-swap
+	font-weight: 500;
 	-webkit-text-size-adjust: 100%;
-	color: $gray-dark;
+	color: $gray-100;
 }

@@ -1,0 +1,171 @@
+:root {
+    --space : 1rem;
+    --space-8xl : calc(var(--space) * 9rem);  
+    --space-7xl : calc(var(--space) * 8rem);   
+    --space-6xl : calc(var(--space) * 7rem); 
+    --space-5xl : calc(var(--space) * 6rem); 
+    --space-4xl : calc(var(--space) * 5rem);
+    --space-3xl : calc(var(--space) * 4rem);
+    --space-xxl : calc(var(--space) * 3rem);
+    --space-xl : calc(var(--space) * 2rem);
+    --space-lg : calc(var(--space) * 1.5rem);
+    --space-sm : calc(var(--space) * 0.75rem);
+    --space-xs : calc(var(--space) * 0.5rem);
+    --space-xxs : calc(var(--space) * 0.2em);
+}
+
+body {
+    //General
+    --bgColor : #{$white};
+    --eyebrowColor : #{$gray-50};
+    --headlineColor: #{$gray-100};
+    --headlineLinkColor: #{$secondary-60};
+    --bodyColor: #{$gray-100};
+    --linkColor: #{$secondary-60};
+    --linkColorInactive: #{$gray-40};
+    --pictogramOutline: #{$black};
+    --pictogramColor: #{$secondary-50};
+    
+    //Buttons
+    --primaryBtnBg: #{#{$secondary-60}};
+    --primaryBtnBorder: #{$secondary-60};
+    --primaryBtnColor: #{$white};
+        --primaryBtnBgHover: #{$secondary-70};
+        --primaryBtnBgBorderHover: #{$secondary-70};
+    
+    --secondaryBtnBg: transparent;
+    --secondaryBtnBorder: #{$gray-100};
+    --secondaryBtnColor: #{$gray-100};
+        --secondaryBtnBgHover: #{$gray-100};
+        --secondaryBtnBorderHover: #{$gray-100};
+        --secondaryBtnColorHover: #{$white};
+
+    --inactiveBg: #{$gray-20};
+    --inactiveColor: #{$gray-40};
+
+    //Inputs
+    --inputBg: #{$white};
+    --inputColor: #{$gray-70};
+    --inputBorder: #{$gray-30};
+        --inputColorFocus: #{$gray-70};
+        --inputBorderFocus: #{$secondary-60};
+        --inputColorError: #{$gray-70};
+        --inputBorderError: #{$error-50};
+        --inputBgInactive: #{$gray-20};
+        --inputColorInactive: #{$gray-40};
+        --inputBorderInactive: #{$gray-30};
+
+    //Cards
+    --cardBg: #{$white};
+    --cardBorderColor: #{$gray-20};
+    --headlineCardColor: #{$gray-100};
+    --bodyCardColor: #{$gray-100};
+    --linkCardColor: #{$secondary-60};
+    --pictogramCardOutline: #{$black};
+    --pictogramCardColor: #{$secondary-50};
+}
+
+body .light-gray {
+    //General
+    --bgColor : #{$gray-0};
+    --eyebrowColor : #{$gray-50};
+    --headlineColor: #{$gray-100};
+    --headlineLinkColor: #{$secondary-60};
+    --bodyColor: #{$gray-100};
+    --linkColor: #{$secondary-60};
+    --linkColorInactive: #{$gray-40};
+    --pictogramOutline: #{$black};
+    --pictogramColor: #{$secondary-50};
+    
+    //Buttons
+    --primaryBtnBg: #{$secondary-60};
+    --primaryBtnBorder: #{$secondary-60};
+    --primaryBtnColor: #{$white};
+        --primaryBtnBgHover: #{$secondary-70};
+        --primaryBtnBgBorderHover: #{$secondary-70};
+    
+    --secondaryBtnBg: transparent;
+    --secondaryBtnBorder: #{$gray-100};
+    --secondaryBtnColor: #{$gray-100};
+        --secondaryBtnBgHover: #{$gray-100};
+        --secondaryBtnBorderHover: #{$gray-100};
+        --secondaryBtnColorHover: #{$white};
+
+    --inactiveBg: #{$gray-20};
+    --inactiveColor: #{$gray-40};
+
+    //Inputs
+    --inputBg: #{$gray-0};
+    --inputColor: #{$gray-70};
+    --inputBorder: #{$gray-30};
+        --inputColorFocus: #{$gray-70};
+        --inputBorderFocus: #{$secondary-60};
+        --inputColorError: #{$gray-70};
+        --inputBorderError: #{$error-50};
+        --inputBgInactive: #{$gray-20};
+        --inputColorInactive: #{$gray-40};
+        --inputBorderInactive: #{$gray-30};
+
+    //Cards
+    --cardBg: #{$white};
+    --cardBorderColor: #{$gray-20};
+    --headlineCardColor: #{$gray-100};
+    --bodyCardColor: #{$gray-100};
+    --linkCardColor: #{$secondary-60};
+    --pictogramCardOutline: #{$black};
+    --pictogramCardColor: #{$secondary-50};
+}
+
+body {
+    &.dark,
+    .dark {
+    //General
+    --bgColor : #{$gray-0};
+    --eyebrowColor : #{$gray-50};
+    --headlineColor: #{$gray-100};
+    --headlineLinkColor: #{$secondary-60};
+    --bodyColor: #{$gray-100};
+    --linkColor: #{$primary-50};
+    --linkColorInactive: #{$gray-40};
+    --pictogramOutline: #{$white};
+    --pictogramColor: #{$secondary-50};
+    
+    //Buttons
+    --primaryBtnBg: #{$primary-50};
+    --primaryBtnBorder: #{$primary-50};
+    --primaryBtnColor: #{$white};
+        --primaryBtnBgHover: #{$secondary-70};
+        --primaryBtnBgBorderHover: #{$secondary-70};
+    
+    --secondaryBtnBg: transparent;
+    --secondaryBtnBorder: #{$gray-100};
+    --secondaryBtnColor: #{$gray-100};
+        --secondaryBtnBgHover: #{$gray-100};
+        --secondaryBtnBorderHover: #{$gray-100};
+        --secondaryBtnColorHover: #{$white};
+
+    --inactiveBg: #{$gray-20};
+    --inactiveColor: #{$gray-40};
+
+    //Inputs
+    --inputBg: #{$white};
+    --inputColor: #{$gray-70};
+    --inputBorder: #{$gray-30};
+        --inputColorFocus: #{$gray-70};
+        --inputBorderFocus: #{$secondary-60};
+        --inputColorError: #{$gray-70};
+        --inputBorderError: #{$error-50};
+        --inputBgInactive: #{$gray-20};
+        --inputColorInactive: #{$gray-40};
+        --inputBorderInactive: #{$gray-30};
+
+    //Cards
+    --cardBg: #{$white};
+    --cardBorderColor: #{$gray-20};
+    --headlineCardColor: #{$gray-100};
+    --bodyCardColor: #{$gray-100};
+    --linkCardColor: #{$secondary-60};
+    --pictogramCardOutline: #{$black};
+    --pictogramCardColor: #{$secondary-50};
+    }
+}

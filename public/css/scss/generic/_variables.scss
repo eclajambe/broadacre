@@ -18,6 +18,53 @@ $valid : #089e00;
 $warning : #fff664;
 $information : #000db5;
 
+//Colors
+
+//Grayscale
+$white : #FFFFFF;
+$gray-0 : #f7f9fa;
+$gray-10 : #f0f5f8;
+$gray-20 : #e3ebef;
+$gray-30 : #cdd8de;
+$gray-40 : #b1bdc4;
+$gray-50 : #8f9ca3;
+$gray-60 : #6e777c;
+$gray-70 : #52575a;
+$gray-80 : #3d4042;
+$gray-90 : #303233;
+$gray-100 : #1a1a1a;
+$black : #000000; 
+
+//Primary
+$primary-5 : #fffae6;
+$primary-20 : #ffefbf;
+$primary-30 : #ffdd8e;
+$primary-50 : #f0ab00;
+$primary-60 : #cd9600;
+$primary-70 : #a37900;
+
+//Secondary  
+$secondary-5 : #e3f7ff;
+$secondary-20 : #b6e6fa;
+$secondary-30 : #85d2f1;
+$secondary-50 : #008fd3;
+$secondary-60 : #0078b6;
+$secondary-70 : #005f92;
+
+//System
+$success-0 : #f0ffeb;
+$success-20 : #c6f0b9;
+$success-50 : #56a945;
+$success-80 : #296423;
+$warning-0 : #ffe1c9;
+$warning-20 : #ffd0a5;
+$warning-50 : #e67e22;
+$warning-80 : #864300;
+$error-0 : #ffdcd5;
+$error-20 : #ffc5b6;
+$error-50 : #e6633b;
+$error-80 : #902907;
+
 
 //Typography
 $font : "BentonSans", "Helvetica", "Arial", sans-serif;
@@ -46,9 +93,14 @@ $pad-half : $pad/2;
 $pad-quarter :$pad/4;
 
 //Borders
-$border-med: 3px;
-$border-thick: 7px;
+$border-thin: 2px;
+$border-med: 4px;
+$border-thick: 6px;
 
+//Radius
+$radius-sm: $space/8;
+$radius-med: $space/4;
+$radius-lg: $space/2;
 
 //Breakpoints
 $bp-small : 24em;
@@ -61,5 +113,3 @@ $bp-large-2 : 66em;
 $bp-xl : 73em;
 $bp-xxl : 89em;
 $bp-xxxl : 93em;
-
-//

@@ -1,7 +1,7 @@
 'use strict';
 
-var gulp = require('gulp'),
-    sass = require('gulp-sass')(require('sass')),
+var gulp   = require('gulp'),
+    sass   = require('gulp-sass')(require('sass')),
     concat = require('gulp-concat');
 
 sass.compiler = require('node-sass');
